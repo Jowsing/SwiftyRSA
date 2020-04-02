@@ -16,7 +16,7 @@ SwiftyRSA is used in the [Scoop](https://www.takescoop.com/) [iOS app](https://i
 Installation
 ------------
 
-### Swift 3.2 / 4.0+
+### Swift 3.2 / 4.0+ / 5.0+
 
 With Cocoapods:
 
