@@ -91,8 +91,7 @@ public class ClearMessage: Message {
             idx += maxChunkSize
         }
         
-        let encryptedData = Data(bytes: UnsafePointer<UInt8>(encryptedDataBytes), count: encryptedDataBytes.count)
-        return EncryptedMessage(data: encryptedData)
+        return EncryptedMessage(data: Data(encryptedDataBytes))
     }
     
     /// Signs a clear message using a private key.
@@ -126,8 +125,7 @@ public class ClearMessage: Message {
             throw SwiftyRSAError.signatureCreateFailed(status: status)
         }
         
-        let signatureData = Data(bytes: UnsafePointer<UInt8>(signatureBytes), count: signatureBytes.count)
-        return Signature(data: signatureData)
+        return Signature(data: Data(signatureBytes))
     }
     
     /// Verifies the signature of a clear message.

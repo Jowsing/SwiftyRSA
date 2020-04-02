@@ -53,7 +53,6 @@ public class EncryptedMessage: Message {
             idx += blockSize
         }
         
-        let decryptedData = Data(bytes: UnsafePointer<UInt8>(decryptedDataBytes), count: decryptedDataBytes.count)
-        return ClearMessage(data: decryptedData)
+        return ClearMessage(data: Data(decryptedDataBytes))
     }
 }

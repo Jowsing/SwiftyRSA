@@ -150,9 +150,7 @@ public enum SwiftyRSA {
     }
     
     static func addKey(_ keyData: Data, isPublic: Bool, tag: String) throws ->  SecKey {
-        
-        var keyData = keyData
-        
+                
         guard let tagData = tag.data(using: .utf8) else {
             throw SwiftyRSAError.tagEncodingFailed
         }
